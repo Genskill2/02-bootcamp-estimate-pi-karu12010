@@ -1,6 +1,6 @@
 import math
 import unittest
-random import*
+from random import *
 
 class TestWallis(unittest.TestCase):
     def test_low_iters(self):
