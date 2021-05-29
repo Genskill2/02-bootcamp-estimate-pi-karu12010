@@ -30,3 +30,25 @@ class TestMC(unittest.TestCase):
     
 if __name__ == "__main__":
     unittest.main()
+    
+def wallis(iter): 
+    p=1.0
+    for i in range(1,iter):
+        k=4*i*i
+        d=k-1
+        p*=(k/d)
+    pi=2*p
+    return pi
+
+def monte_carlo(iter):
+    inside=0.0
+    for i in range(0,iter):
+        x=random.random()
+        y=random.random()
+        z=(x*x)+(y*y)
+        d=math.sqrt(z)        
+        if d<1.0:
+            inside+=1
+    r=inside/iter
+    pi=4*r
+    return pi
