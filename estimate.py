@@ -44,8 +44,8 @@ def wallis(iter):
 def monte_carlo(iter):
     inside=0.0
     for i in range(0,iter):
-        x=random.random()
-        y=random.random()
+        x=random()
+        y=random()
         z=(x*x)+(y*y)
         d=math.sqrt(z)        
         if d<1.0:
